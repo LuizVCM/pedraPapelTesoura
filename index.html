@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedra, papel e tesoura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://media.istockphoto.com/id/1371324458/pt/vetorial/hand-gestures-playing-the-game-rock-paper-scissors-icon-vector-design-isolated-background.jpg?s=612x612&w=0&k=20&c=pU-wZ-6mV9X4BdSjoxd2bcB5zrz5UyvbkVvdyyAhwf0=">
+   
+
+</head>
+<body>
+  <div class="light"></div>
+ <!-- Título principal -->
+  <div class="fundo"></div>
+<h1> Pedra, papel e tesoura - TDS25PSG1T👌</h1>
+  <div class="choices"> <!-- Div que agrupa os botões de escolha-->
+    <button data-choice="pedra"> Pedra </button> <!-- Aqui é u botão para escolher pedra.... no caso, utilizamos um atributo personalizado que começa com data- (que armazena informações extras para acessarmos com JavaScript)-->
+
+    <button data-choice="papel"> papel </button>
+    <button data-choice="tesoura"> tesoura </button>
+
+  </div>
+  <!-- Texto que informa a escolha de cada jogador -->
+   <p id="player1-choice">Jogador 1: escolha sua jogada</p>
+   <p id="player2-choice">Jogador 2: escolha sua jogada </p>
+   <!-- Texto que exibe o resultado -->
+   <p id="winner"></p> 
+   
+
+    <script type="text/javascript" src="script.js">
+    
+    </script>
+</body>
+</html>

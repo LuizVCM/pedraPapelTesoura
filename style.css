@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bitcount+Grid+Double:wght@100..900&family=Henny+Penny&family=Menbere:wght@100..700&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box; /*ele inclui bordas e paddings no tamanho total do elemento*/
+
+}
+body{
+    background: linear-gradient(140deg, rgb(39, 4, 4), rgb(11, 4, 35)); /* fundo com gradiente azul na diagonal ()*/
+
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+
+    font-style: italic;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0.5,
+      "ELSH" 0,
+      "ELXP" 0;
+      font-size: 40px;
+    
+      color: rgb(0, 0, 0); /* cor da letra*/
+      display: flex; /*usa flexbox para o posicionamento*/
+      flex-direction: column; /*define a direção na forma de coluna*/
+      align-items:center; /*centraliza horizontamente*/
+      justify-content: flex-start; /*Alinha os filhos (elementos) no topo da página*/
+      min-height: 100vh; /*Garante que a body ocupe pelo menos toda aaltura da tela*/
+      margin: 0; /* Eemove margens padrão do navegador */
+      padding: 2rem; /*Espaço interno nas bordas da body */
+}
+h1{
+    margin-bottom: 1rem; /*rem = "root em" valor relativo ao tamanho de componentes emem html*/
+    text-shadow: 6px 6px 10px rgb(255, 0, 128), 0 0 12px rgb(0, 255, 221); /*valores são as direções da sombra e cor*/
+    filter:brightness(140%);
+    
+}
+
+/*Contâiner dos botões da escolha*/
+.choices{
+    display: flex; /* Organiza os botões lado a lado*/
+    gap: 1rem; /* Espaço entre os botões*/
+    margin-bottom: 80px;  /* 3rem;Espaço abaixo do container*/
+}
+/*Estilo dos botões*/
+button{
+    background: linear-gradient(140deg, red, blue);
+    border-radius: 35px;
+    border:none;
+    width:270px;
+    height:110px;
+    font-size: 3rem; /* tamanho da fonte*/
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+
+    font-style: italic;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0.5,
+      "ELSH" 0,
+      "ELXP" 0;
+      box-shadow: 5px 5px 10px rgb(0, 34, 255), -5px -5px 15px rgb(255, 0, 0), inset 0 0 0px black;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* suavisa as mudanças visuais*/
+      min-width: 100px; /*largura mínima*/
+      color: #b3b3b3;
+      animation: cor 2s infinite
+      
+      
+}
+@keyframes cor {
+    0%{ box-shadow: 5px 5px 10px rgb(0, 34, 255), -5px -5px 15px rgb(255, 0, 0), inset 0 0 0px black;}
+  33%{  box-shadow: 5px 5px 10px rgb(0, 34, 255), -5px -5px 15px rgb(255, 0, 0), inset 0 0 0px black;}
+}
+button:hover{
+    transform: scale(127%);
+    margin: 0 25px;
+    animation:  cores 2s infinite;
+    filter: contrast(210%);
+    
+   
+    /*transform: translate(-20%, -20%);  Centraliza a luz no cursor */
+    transition: all 0.1s ease-out; /* Suaviza o movimento */
+}
+@keyframes cores{
+ 0%{color:#4b4b4b00; text-shadow: 0 0 10px #b3b3b3; text-decoration: none;}
+ 33%{color: white; text-shadow: 0 0 20px white; text-decoration: underline;}
+ 66%{ color: #2a2a2a00; text-shadow: 0 0 10px #b3b3b3; text-decoration: none;}
+ 100%{color: white; text-shadow: 0 0 20px white; text-decoration: underline;}
+}
+p{
+    color:white;
+    font-size: 1.2rem; /*margem acima e abaixo*/
+    margin: 0.5rem 0; /*margem acima e abaixo*/
+    min-height: 1.5rem; /* garante altura mínima para evitar "pulos" quando o texto muda*/
+    text-align: center; /*centraliza o texto*/
+    text-shadow: 0 0 6px #000dffcc; /* sombra azul para destacar o texto*/
+}
+/*Estilo para o texto que mostra o vencedor*/
+#winner{
+    font-weight: 700; /*negrito forte*/
+    font-size: 1.5rem; /*fonte maior para o destaque*/
+    margin-top: 1.5rem; /* espaço acima do texto*/
+    color: #fffa; /*branco com transparência*/
+    text-shadow: 5px 7px 10px rgb(65, 0, 163), /*camada 1: brilho ciano suave*/
+    0 0 20px #0ff, /*camada 2: brilho mais intenso*/
+     0 0 30px #0ff; /*camada 3: brilho ainda mais intenso*/
+     filter: brightness(150%)
+}
